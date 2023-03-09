@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include("./includes/head.php") ?>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<body>
+<header>
+    <?php include("./includes/head.php") ?>
+</header>
 <body>
     <h1>Performance Dashboard: Waterman Group</h1>
     <?php include("./includes/nav.php") ?>
+</body>
 </body>
 </html>

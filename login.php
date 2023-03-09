@@ -21,13 +21,18 @@
       <a href="#" class="link">Forgot Your Password?</a>
     </div>
     <div class="action">
-      <button>Register</button>
+      <button onclick="window.location.href='register.html'">Register</button>
       <button>Submit</button>
     </div>
   </form>
 </div>
 <!-- partial -->
   <script  src="js\script.js"></script>
+  <footer>
+    <?php 
+    include('includes\footer.php')
+    ?>
+  </footer>
 
 </body>
 </html>

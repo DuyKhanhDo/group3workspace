@@ -5,11 +5,9 @@ form.addEventListener('submit', (e) => {
   return false;
 });
 
-// Get the Register button
-const registerButton = document.querySelector('button:nth-child(1)');
+function redirectToRegister() {
+  // Redirect to the registration page
+  window.location.href = "register.html";
+}
 
-// Add an event listener to the Register button
-registerButton.addEventListener('click', () => {
-  // Redirect to register.html
-  window.location.href = 'register.html';
-});
+

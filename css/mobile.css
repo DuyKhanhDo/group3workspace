@@ -79,7 +79,7 @@
     -webkit-box-direction: normal;
             flex-direction: row;
   }
-  .login-form .action button {
+  .login-form .action div {
     width: 100%;
     border: none;
     padding: 18px;
@@ -95,16 +95,16 @@
     -webkit-transition: all .3s;
     transition: all .3s;
   }
-  .login-form .action button:hover {
+  .login-form .action div:hover {
     background: #d8d8d8;
   }
-  .login-form .action button:nth-child(2) {
+  .login-form .action div:nth-child(2) {
     background: #2d3b55;
     color: #fff;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 4px;
   }
-  .login-form .action button:nth-child(2):hover {
+  .login-form .action div:nth-child(2):hover {
     background: #3c4d6d;
   }
 
@@ -212,3 +212,77 @@ body {
   .register-form .action button:nth-child(1):hover {
     background: #3c4d6d;
   }
+  /* <----------------------------------------> */
+    /* <----------footer-------------------> */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 60px 0;
+      }
+      
+      .container {
+        max-height: fit-content;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      
+      p {
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .contact-list li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+      
+      .contact-list i {
+        margin-right: 10px;
+        color: #fff;
+      }
+      
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .social-icons li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      
+      .social-icons li:last-child {
+        margin-right: 0;
+      }
+      
+      .social-icons a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        color: #333;
+        font-size: 20px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        background-color: #fff;
+        color: #333;
+      }
+      
