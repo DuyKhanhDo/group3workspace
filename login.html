@@ -21,8 +21,17 @@
       <a href="#" class="link">Forgot Your Password?</a>
     </div>
     <div class="action">
-      <button>Register</button>
+      <button id="register-button">Register</button>
       <button>Sign in</button>
+
+      <script>
+        function redirectToRegister() {
+          window.location.href = "register.html";
+        }
+      
+        const registerButton = document.getElementById("register-button");
+        registerButton.addEventListener("click", redirectToRegister);
+      </script>
     </div>
   </form>
 </div>
