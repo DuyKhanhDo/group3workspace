@@ -4,8 +4,8 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
-const registerButton = document.getElementById('register-btn');
+const registerDiv = document.getElementById('register-div');
 
-registerButton.addEventListener('click', () => {
+registerDiv.addEventListener('click', () => {
   window.location.href = 'register.html';
 });
