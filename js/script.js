@@ -13,5 +13,5 @@ registerDiv.addEventListener('click', () => {
 
 function redirectToRegister() {
   // Redirect to the registration page
-  window.location.href = "register.html";
+  window.location.href = "register.php";
 }

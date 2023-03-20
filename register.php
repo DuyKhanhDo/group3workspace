@@ -1,12 +1,12 @@
 <?php
-require_once 'database\database.php';
+require_once 'db.php';
 
 if (isset($_POST['register'])) {
-    $name = $_POST['name'];
+    $username = $_POST['username'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO user (username, email, password) VALUES ('$name', '$email', '$password')";
+    $query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
     if ($conn->query($query) === TRUE) {
         header("Location: login.php");
     } else {
@@ -40,7 +40,7 @@ if (isset($_POST['register'])) {
                 <a href="login.php" class="link">Already Have an Account?</a>
             </div>
             <div class="action">
-                <div type="submit" name="register" id="submit-div">Submit</div>
+                <button type="submit" name="register" id="submit-div">Submit</button>
             </div>
         </form>
     </div>
