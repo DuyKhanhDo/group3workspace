@@ -45,7 +45,7 @@ if (isset($_POST['login'])) {
             </div>
             <div class="action">
                 <div id="register-div"><a href="register.php">Register</a></div>
-                <button type="submit" name="login" id="signIn-div">Sign in</button>
+                <div type="submit" name="login" id="signIn-div">Sign in</div>
             </div>
         </form>
     </div>

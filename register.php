@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'database\database.php';
 
 if (isset($_POST['register'])) {
     $name = $_POST['name'];
@@ -40,7 +40,7 @@ if (isset($_POST['register'])) {
                 <a href="login.php" class="link">Already Have an Account?</a>
             </div>
             <div class="action">
-                <button type="submit" name="register" id="submit-div">Submit</button>
+                <div type="submit" name="register" id="submit-div">Submit</div>
             </div>
         </form>
     </div>
