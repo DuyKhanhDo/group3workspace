@@ -1,23 +1,16 @@
 <?php
-session_start();
-require_once 'database\database.php';
+require_once 'db.php';
 
-if (isset($_POST['login'])) {
+if (isset($_POST['register'])) {
+    $name = $_POST['name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $query = "SELECT * FROM users WHERE email='$email'";
-    $result = $conn->query($query);
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['username'] = $row['username'];
-            header("Location: index.php");
-        } else {
-            $error = "Invalid password";
-        }
+    $query = "INSERT INTO user (username, email, password) VALUES ('$name', '$email', '$password')";
+    if ($conn->query($query) === TRUE) {
+        header("Location: login.php");
     } else {
-        $error = "Invalid email";
+        $error = "Error: " . $query . "<br>" . $conn->error;
     }
 }
 ?>
@@ -25,27 +18,29 @@ if (isset($_POST['login'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login-WaterMan</title>
+    <title>Register-WaterMan</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
     <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
-    <div class="login-form">
+    <div class="register-form">
         <form method="POST" action="">
-            <h1>Login</h1>
+            <h1>Register</h1>
             <div class="content">
                 <?php if (isset($error)) echo "<p style='color: red;'>$error</p>"; ?>
+                <div class="input-field">
+                    <input type="text" name="username" placeholder="Name" autocomplete="nope" required>
+                </div>
                 <div class="input-field">
                     <input type="email" name="email" placeholder="Email" autocomplete="nope" required>
                 </div>
                 <div class="input-field">
                     <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
                 </div>
-                <a href="#" class="link">Forgot Your Password?</a>
+                <a href="login.php" class="link">Already Have an Account?</a>
             </div>
             <div class="action">
-                <div id="register-div"><a href="register.php">Register</a></div>
-                <button type="submit" name="login" id="signIn-div">Sign in</button>
+                <button type="submit" name="register" id="submit-div">Submit</button>
             </div>
         </form>
     </div>
